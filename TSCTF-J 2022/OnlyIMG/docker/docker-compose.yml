@@ -1,0 +1,10 @@
+version: "2"
+services:
+  easyupload:
+    container_name: EasyUpload
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - "8080:80"

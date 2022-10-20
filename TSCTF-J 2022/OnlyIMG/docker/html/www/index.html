@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Upload So Easy
+    </title>
+</head>
+<body>
+<h1>Show Me Your Pics <br></h1>
+(No PHP file cuz I don't like PHP)
+<br>
+<br>
+<script language="javascript">
+    function Checkfiles()
+    {
+    var fup = document.getElementById('file');
+    var fileName = fup.value;
+    var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+    if(ext == "gif" || ext == "GIF" || ext == "JPEG" || ext == "jpeg" || ext == "jpg" || ext == "JPG" || ext == "png" || ext == "PNG")
+    {
+    return true;
+    }
+    else
+    {
+    alert("Only Pics are allowed !");
+    return false;
+    }
+    }
+</script>
+<!-- I hid my source code here -> /www.zip -->
+<!-- if you want more hints, contact me. -->
+<form action="upload.php" method="post" onsubmit="return Checkfiles()" enctype="multipart/form-data">
+    <label for="file">文件名：</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" name="submit" value="上传">
+</form>
+</body>
+</html>

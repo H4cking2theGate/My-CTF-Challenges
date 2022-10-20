@@ -1,0 +1,10 @@
+version: "2"
+services:
+  onlineunzip:
+    container_name: OnlineUnzip
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"

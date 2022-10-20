@@ -1,0 +1,10 @@
+version: '3'
+services:
+    thyme:
+      container_name: Thyme
+      build:
+        context: .
+        dockerfile: ./Dockerfile
+      ports:
+        - 8090:8090
+      restart: always
